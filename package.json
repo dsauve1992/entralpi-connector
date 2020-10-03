@@ -1,14 +1,14 @@
 {
   "name": "entralpi-connector",
-  "version": "1.1.2",
+  "version": "1.0.0",
   "description": "A nice greeter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "prepare": "npm run build",
-    "publish-lib": "npm run prepare && npm run version && npm run postversion && npm publish"
+    "build": "tsc || exit 1",
+    "postpublish" : "git tag v$npm_package_version && git push --tags",
+    "buildAndPublish" : "npm run build && npm version minor && npm publish"
   },
   "files": [
     "lib/**/*"

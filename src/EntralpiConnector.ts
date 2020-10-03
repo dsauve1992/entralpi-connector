@@ -31,7 +31,7 @@ class EntralpiConnector {
         try {
             const device = await this.selectEntralpiDevice()
             const server = await device!.gatt!.connect();
-            console.log('You are now connected to Entralpi')
+            console.log('You are now connected to Entralpi device')
 
             device.addEventListener("gattserverdisconnected", onDisconnected);
             const service = await server.getPrimaryService(this.PRIMARY_SERVICE_ID);
