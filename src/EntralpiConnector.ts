@@ -90,5 +90,7 @@ class EntralpiConnector {
     }
 }
 
+export default EntralpiConnector;
+
 
 

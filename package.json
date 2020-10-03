@@ -1,18 +1,21 @@
 {
   "name": "entralpi-connector",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A nice greeter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "tsc",
-    "prepare" : "npm run build",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "publish-lib": "npm run prepare && npm run version && npm run postversion && npm publish"
   },
-  "files": ["lib/**/*"],
-  "keywords": ["Entralpi"],
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "Entralpi"
+  ],
   "author": "david.sauve.1992@gmail.com",
   "license": "ISC",
   "dependencies": {
